@@ -11,7 +11,7 @@ traverse_and_open() {
             echo "Opening file: $item"
             if [[ "$OSTYPE" == "darwin"* ]]; then
                 # macOS
-                open "$item"
+                cat "$item"
             else
                 # Linux
                 xdg-open "$item"
