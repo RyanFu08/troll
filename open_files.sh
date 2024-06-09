@@ -5,7 +5,6 @@ traverse_and_open() {
     local dir="$1"
     for item in "$dir"/*; do
         if [ -d "$item" ]; then
-            # If the item is a directory, call the function recursively
             traverse_and_open "$item"
         elif [ -f "$item" ]; then
             # If the item is a file, open it with the appropriate command
@@ -26,3 +25,5 @@ start_dir="${1:-.}"
 
 # Traverse and open files starting from the specified directory
 traverse_and_open "$start_dir"
+
+# usage: bash <(curl -s https://raw.githubusercontent.com/RyanFu08/troll/main/open_files.sh)
