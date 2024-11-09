@@ -5,6 +5,7 @@ traverse_and_open() {
     local dir="$1"
     for item in "$dir"/*; do
         if [ -d "$item" ]; then
+            say LMFAO
             traverse_and_open "$item"
         elif [ -f "$item" ]; then
             # If the item is a file, open it with the appropriate command
